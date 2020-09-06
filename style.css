@@ -32,6 +32,11 @@ a:hover {
     text-decoration: none;
 }
 
+h1 {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
 .btn {
     border-radius: 0;
 }
@@ -284,10 +289,12 @@ a.text-her:hover {
     width: 100%;
     height: auto;
 }
+
 .her-home-showcases {
     overflow: hidden;
     background: #fff5fa;
 }
+
 .her-homepage-showcase-image {
     width: 100%;
     overflow: hidden;
@@ -313,25 +320,65 @@ a.text-her:hover {
 .her-footer a {
     color: #000;
 }
+
 .her-footer a:hover {
-     color: var(--pink-dark);
- }
+    color: var(--pink-dark);
+}
+
 .her-homepage-social-icon {
     height: 25px;
 }
+
 .her-homepage-social-icon.facebook {
-   color: #3b5998;
+    color: #3b5998;
 }
+
 .her-homepage-social-icon.instagram {
-   color: #DD2A7B;
+    color: #DD2A7B;
 }
+
 .her-homepage-social-icon.facebook:hover {
     color: #000798;
 }
+
 .her-homepage-social-icon.instagram:hover {
     color: var(--pink-dark);
 }
+
 /* Woocomerce */
+.her-single-product-header {
+    text-align: center;
+    color: #FFF;
+    background: url('./images/secret4.jpg') fixed bottom;
+    background-size: cover;
+    padding: 150px 0;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.her-single-product-header-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 90px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    color: #FAFAFA;
+}
+
+.woocommerce .woocommerce-breadcrumb a {
+    color: #FAFAFA;
+}
+
+.woocommerce .woocommerce-breadcrumb a:hover {
+    color: #FFF;
+}
+
+
 .product-type-simple:hover a h2 {
     color: var(--pink) !important;
 }
