@@ -46,9 +46,16 @@ if (!function_exists('her_theme_setup')) {
         add_theme_support('automatic-feed-links');
 
         /*
+         * Hỗ trợ Woocommerce
+         */
+        add_theme_support( 'woocommerce' );
+
+        /*
          * Thêm chức năng post thumbnail
          */
         add_theme_support('post-thumbnails');
+
+        add_image_size('ogimage', 600, 314, true);
 
         /*
          * Thêm chức năng title-tag để tự thêm <title>
@@ -126,6 +133,78 @@ function register_navwalker()
 }
 
 add_action('after_setup_theme', 'register_navwalker');
+
+/**
+ * Discount banner
+ */
+if (!function_exists('her_discount_banner')) {
+    function her_discount_banner()
+    {
+        global $her_options;
+        if ($her_options['discount-banner-enable'] == 1) : ?>
+            <div class="d-none discount-end-time"><?php echo strtotime($her_options['discount-end-time']);?></div>
+            <div class="discount-banner py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 my-auto discount-time">
+                            <div class="d-inline-block">
+                                <div class="discount-time-group mr-3">
+                                    <div class="discount-time-group__number days">
+                                        3
+                                    </div>
+                                    <div class="discount-time-group__text">
+                                        NGÀY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-inline-block">
+                                <div class="discount-time-group mr-3">
+                                    <div class="discount-time-group__number hours">
+                                        12
+                                    </div>
+                                    <div class="discount-time-group__text">
+                                        GIỜ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-inline-block">
+                                <div class="discount-time-group  mr-3">
+                                    <div class="discount-time-group__number mins">
+                                        50
+                                    </div>
+                                    <div class="discount-time-group__text">
+                                        PHÚT
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-inline-block">
+                                <div class="discount-time-group">
+                                    <div class="discount-time-group__number seconds">
+                                        28
+                                    </div>
+                                    <div class="discount-time-group__text">
+                                        GIÂY
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 my-auto discount-text">
+                            <div class="discount-percent-group">
+                                <div class="discount-percent"><?php echo $her_options['discount-percent']; ?></div>
+                                <div class="discount-additional-info"><?php echo $her_options['discount-sub-title']; ?></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 my-auto discount-button">
+                            <a class="btn bg-white text-her" href="<?php echo $her_options['discount-link']; ?>">XEM CHI
+                                TIẾT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif;
+    }
+}
+
 
 if (!function_exists('her_menu')) {
     function her_menu($name)

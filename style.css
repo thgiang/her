@@ -2,7 +2,7 @@
  * Her <3
 
  * Theme Name: Her Theme
- * Description: Her
+ * Description: Theme đầu tay, làm có tâm, code từng dòng một từ a-z cho bạn chủ shop xinh gái đáng yêu
  * Theme URI:
  * Version: 1.0
  * Theme Author: GiangTH
@@ -12,12 +12,72 @@
  */
 :root {
     --pink: #ff1694;
+    --pink-light: rgba(255, 22, 147, 0.72);
+    --pink-dark: rgb(255, 0, 98);
+    --price-color: #cd3a3a;
 }
 
 body {
     overflow-x: hidden !important;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
+}
+
+a {
+    color: var(--pink);
+}
+
+a:hover {
+    color: var(--pink-dark);
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.text-her {
+    color: var(--pink);
+}
+
+a.text-her:hover {
+    color: var(--pink-light);
+}
+
+.btn-her {
+    background: var(--pink);
+    color: #FFF;
+}
+
+.btn-her:hover {
+    background: var(--pink-light);
+    color: #FFF;
+}
+
+.btn-outline-her {
+    border: 1px solid var(--pink);
+    color: #000;
+}
+
+.btn-outline-her:hover {
+    background: var(--pink);
+    color: #FFF !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .navbar {
@@ -35,7 +95,7 @@ body {
 }
 
 .mobile-logo img {
-    height: 40px;
+    height: 60px;
 }
 
 .mobile-collapse {
@@ -43,22 +103,18 @@ body {
     color: var(--pink);
 }
 
-.mobile-collapse-button {
-}
-
 #header {
     text-align: center;
 }
 
 .navbar-light .primary-menu.navbar-nav .nav-link {
-    //font-weight: bold;
+    font-weight: bold;
     color: #000;
 }
 
 .navbar-light .primary-menu.navbar-nav .nav-link:focus,
 .navbar-light .primary-menu.navbar-nav .nav-link:hover,
-.navbar-light .primary-menu.navbar-nav .active .nav-link
-{
+.navbar-light .primary-menu.navbar-nav .active .nav-link {
     font-weight: bold;
     color: var(--pink);
 }
@@ -67,12 +123,278 @@ body {
     padding-left: 15px;
 }
 
-#discount {
+/* Discount */
+.discount-banner {
     background: var(--pink) url('images/discount_bg.png');
     background-size: cover;
     min-height: 100px;
 }
+
+.discount-time {
+    text-align: left
+}
+
+.discount-text {
+    text-align: center;
+}
+
+.discount-button {
+    text-align: right;
+}
+
+.discount-time-group {
+    text-align: center;
+}
+
+.discount-time-group__number {
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    background: #FFF;
+    line-height: 50px;
+    font-size: 1.75rem;
+    border-radius: 2px;
+}
+
+.discount-time-group__text {
+    color: #FFF;
+    padding-top: 6px;
+    font-size: 1rem;
+}
+
+.discount-percent {
+    padding-left: 80px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.discount-additional-info {
+    margin-left: -25px;
+    font-size: 1.5rem;
+}
+
+/* END: Discount */
+.her-home-collection-title {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+.her-btn {
+    padding: 0.5rem 1rem;
+    background: var(--pink);
+    color: #FFF;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.her-btn:hover {
+    background: var(--pink-dark);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.her-title-h2 {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.her-title-bg1 {
+    background: url('images/desktop/br1.png') no-repeat center bottom;
+    background-position-y: 83%;
+    background-size: 370px 25px;
+}
+
+.her-title-bg2 {
+    background: url('images/desktop/br1.png') no-repeat center bottom;
+    background-position-y: 70%;
+    background-size: 350px 25px;
+}
+
+.her-title-bg3 {
+    background: url('images/desktop/br1.png') no-repeat center bottom;
+    background-position-y: 82%;
+    background-size: 290px 25px;
+}
+
+.her-title-bg4 {
+    background: url('images/desktop/br1.png') no-repeat center bottom;
+    background-position-y: 82%;
+    background-size: 200px 25px;
+}
+
+.her-title-bg5 {
+    background: url('images/desktop/br5.png') no-repeat center bottom;
+    background-position-y: 80%;
+    background-size: 150px 25px;
+}
+
+.her-title-bg6 {
+    background: url('images/desktop/br6.png') no-repeat center bottom;
+}
+
+.her-home-collection {
+    background: #FFF url('images/bitmap.png') fixed;
+    background-size: cover;
+}
+
+
+.her-testimonial {
+    background: rgba(255, 203, 231, 0.2);
+}
+
+.her-testimonial-card {
+    box-shadow: 2px 4px 8px 0 #ffb7f5;
+}
+
+.her-testimonial-name {
+    font-size: 0.9rem;
+}
+
+.her-testimonial-card {
+    background: url('./images/desktop/leaf.svg') no-repeat bottom right;
+    background-size: 12%;
+}
+
+.her-homepage-post-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.her-homepage-post-title a {
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.her-homepage-post-title a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--pink-light)
+}
+
+.her-homepage-post-content {
+    display: -webkit-box;
+    text-align: justify;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.her-homepage-post-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+.her-home-showcases {
+    overflow: hidden;
+    background: #fff5fa;
+}
+.her-homepage-showcase-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.her-home-services {
+    background: var(--pink);
+}
+
+.her-home-service {
+    line-height: 60px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.her-home-service svg {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.her-footer a {
+    color: #000;
+}
+.her-footer a:hover {
+     color: var(--pink-dark);
+ }
+.her-homepage-social-icon {
+    height: 25px;
+}
+.her-homepage-social-icon.facebook {
+   color: #3b5998;
+}
+.her-homepage-social-icon.instagram {
+   color: #DD2A7B;
+}
+.her-homepage-social-icon.facebook:hover {
+    color: #000798;
+}
+.her-homepage-social-icon.instagram:hover {
+    color: var(--pink-dark);
+}
+/* Woocomerce */
+.product-type-simple:hover a h2 {
+    color: var(--pink) !important;
+}
+
+.woocommerce-loop-category__title {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+    background-color: rgba(255, 22, 148, 0.5);
+    padding: 0.8rem !important;
+    color: #FFF;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.woocommerce .products .product {
+    text-align: center;
+}
+
+.product-category:hover .woocommerce-loop-category__title {
+    background-color: rgba(255, 22, 148, 0.8);
+}
+
+.woocommerce-loop-category__title .mark, .woocommerce-loop-category__title mark {
+    padding: .2rem;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.woocommerce-loop-product__title {
+    color: #000;
+    transition: 0.3s;
+}
+
+.woocommerce-loop-product__title:hover {
+    color: var(--pink);
+}
+
+.woocommerce-Price-amount.amount bdi {
+    font-size: 1rem;
+    color: var(--price-color);
+}
+
+.woocommerce ul.products li.product .button {
+    margin-top: 0;
+    background: var(--pink);
+    font-weight: normal;
+    color: #FFF;
+    border-radius: 0;
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background: var(--pink-dark);
+}
+
+/* END Woocomerce */
+
+
 @media screen and (max-width: 768px) {
+    .discount-banner {
+        zoom: 0.8;
+    }
+
     #navbar-primary ul li:first-child {
         border-top: 2px solid var(--pink);
         margin-top: 15px;
@@ -82,16 +404,39 @@ body {
         display: flex;
     }
 
-    #navbar-primary {
-        /*margin-top: 15px;
-        border-top: 2px solid var(--pink);*/
-    }
-
     .logo {
         display: none;
     }
 
     .navbar {
         border-bottom: 2px solid var(--pink);
+    }
+
+    .discount-time {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .discount-text {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .discount-text .discount-percent {
+        padding-left: 0;
+        color: #FFF;
+    }
+
+    .discount-text .discount-additional-info {
+        margin-left: 0;
+        color: #FFF;
+    }
+
+    .discount-button {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 1rem;
     }
 }
