@@ -1,3 +1,4 @@
+<div class="clearfix"></div>
 <div class="her-home-services pt-5 pb-4">
     <div class="container">
         <div class="row">
@@ -59,6 +60,10 @@
             </div>
         </div>
     </div>
+</div>
+<div class="her-back-drop"></div>
+<div class="her-chat-notice">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/chat.png" />
 </div>
 <?php wp_footer(); ?>
 </body> <!--end body-->

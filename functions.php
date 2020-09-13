@@ -25,6 +25,29 @@ if (!isset($content_width)) {
     $content_width = 620;
 }
 
+/*
+ * Xóa nút đặt hàng mặc định của Woocommerce thay bằng nút Liên hệ
+ */
+if (!function_exists('remove_loop_button')) {
+    function remove_loop_button()
+    {
+        remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+        apply_filters('woocommerce_is_purchasable', false);
+    }
+
+    add_action('init', 'remove_loop_button');
+}
+if (!function_exists('replace_add_to_cart')) {
+    function replace_add_to_cart()
+    {
+        //global $product;
+        //$link = $product->get_permalink();
+        echo do_shortcode('<a class="button cursor-pointer her_chat_now">Mua hàng</a>');
+    }
+    add_action('woocommerce_after_shop_loop_item', 'replace_add_to_cart');
+}
+
+
 /**
  * @ Thiết lập các chức năng sẽ được theme hỗ trợ
  **/
@@ -228,7 +251,7 @@ if (!function_exists('her_menu')) {
                     </a>
                 </div>
                 <div class="col-4 text-right my-auto">
-                    Card
+                    <!--Card -->
                     <i class="fa fa-cart"></i>
                 </div>
             </div>

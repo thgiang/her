@@ -94,7 +94,9 @@ a.text-her:hover {
     width: 92px;
     margin: 31px auto 0 auto;
 }
-
+.cursor-pointer {
+    cursor: pointer;
+}
 .mobile-menu {
     display: none;
 }
@@ -345,6 +347,23 @@ a.text-her:hover {
     color: var(--pink-dark);
 }
 
+.her-back-drop {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.her-chat-notice {
+    display: none;
+    position: fixed;
+    bottom: 26px;
+    right: 88px;
+    z-index: 1000;
+}
 /* Woocomerce */
 .her-single-product-header {
     text-align: center;

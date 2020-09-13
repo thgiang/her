@@ -16,4 +16,25 @@ jQuery(document).ready(function ($) {
             $('.discount-banner .seconds').text(time_left);
         }
     }, 1000);
-})
+
+    $('.add_to_cart_button').text('Mua hàng');
+    $('body').on('click', '.her_chat_now', function(e) {
+        e.preventDefault();
+        /*
+        $('.her-back-drop').show();
+         */
+        $('.her-chat-notice').addClass('d-block animate__animated animate__wobble');
+
+
+        /*
+        setTimeout(function() {
+            $('.her-back-drop').hide();
+        }, 1000);
+        */
+        let timeout = setTimeout(function() {
+            clearTimeout(timeout);
+            $('.her-chat-notice').removeClass('d-block animate__animated animate__wobble');
+        }, 2000);
+    });
+
+});
