@@ -364,7 +364,14 @@ a.text-her:hover {
     right: 88px;
     z-index: 1000;
 }
+.her-fixed-content {
+    background: var(--pink)
+}
 /* Woocomerce */
+.woocommerce table.shop_attributes td {
+    font-style: normal;
+}
+
 .her-single-product-header {
     text-align: center;
     color: #FFF;

@@ -60,6 +60,9 @@ if (post_password_required()) {
          */
         do_action('woocommerce_single_product_summary');
         ?>
+        <div class="her-fixed-content p-2 text-white">
+            Để được tư vấn thêm và đặt mua hàng, anh chị vui lòng click vào biểu tượng Messenger ở cuối trang để chat với nhà Her. Chúng em luôn sẵn sàng trả lời ạ ♥
+        </div>
     </div>
     <div class="clearfix"></div>
     <?php

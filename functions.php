@@ -47,6 +47,12 @@ if (!function_exists('replace_add_to_cart')) {
     add_action('woocommerce_after_shop_loop_item', 'replace_add_to_cart');
 }
 
+add_filter( 'woocommerce_product_tabs', 'her_remove_product_tabs', 9999 );
+function her_remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] );
+    return $tabs;
+}
+
 
 /**
  * @ Thiết lập các chức năng sẽ được theme hỗ trợ
